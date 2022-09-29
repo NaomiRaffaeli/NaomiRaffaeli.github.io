@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+/* general */
 h1 {
   font-size: 3.5em;
   padding: 0;
@@ -30,12 +30,24 @@ h5 {
 
 h6 {
   font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  align-items: end;
 }
 
 p {
   font-size: 1.25em;
 }
 
+.fondo {
+  background-image: url(/img/ladrillos.jpg);
+  background-size: 500px;
+  background-position: center center;
+  margin: 0px;
+  padding: 0px;
+}
+/* general */
+
+/* inicio home */
 body {
   background-color: (antiquewhite);
   font-family: "Roboto", sans-serif;
@@ -44,7 +56,7 @@ body {
 
 .container {
   max-width: 1488px;
-  margin: auto;
+  margin: 0;
 }
 
 header {
@@ -62,7 +74,7 @@ header .container {
   align-items: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
+/* NAV */ 
 header nav {
   list-style: none;
   display: inline-block;
@@ -71,7 +83,13 @@ header nav {
   font-size: 20px;
   text-align: center center;
   padding-inline-end: 2%;
+  flex-direction: row;
+  padding-bottom: 0%;
+  padding-right: 20px;
 }
+
+
+/* Nav */
 
 header a {
   padding: 5px 12px;
@@ -173,38 +191,6 @@ header a:hover {
   background-size: cover;
 }
 
-footer p {
-  margin: 0%;
-  color: rgb(139, 138, 138);
-}
-
-footer section h5 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-footer .container {
-  height: 270px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  margin-left: 1150px;
-}
-
-@media (min-width: 720px) {
-  header .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-header nav {
-  flex-direction: row;
-  padding-bottom: 0%;
-  padding-right: 20px;
-}
-
 #hela-sintac .container {
   display: flex;
   justify-content: center;
@@ -229,17 +215,30 @@ header nav {
 
 }
 
-.fondo {
-  background-image: url(/img/ladrillos.jpg);
-  background-size: 500px;
-  background-position: center center;
-  margin: 0px;
-  padding: 0px;
+/*fin home */
+
+/* footer */
+footer p {
+  margin: 0%;
+  color: rgb(139, 138, 138);
 }
 
-h6 {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  align-items: end;
+footer section h5 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+footer .container {
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-left: 1150px;
+}
+
+footer {
+  margin-top: 20px;
 }
 
 #heladitos {
@@ -249,13 +248,16 @@ h6 {
   text-align: end;
 }
 
+/*fin footer*/
+
 /*Carrousel*/
 
 .carousel-inner img {
   width: 100%;
   max-height: 650px;
-  margin-left: 200px;
+  margin-left: 15%;
   margin-top: 50px;
+  align-items: center;
 
 }
 
@@ -267,4 +269,14 @@ height: 650px;
   margin-bottom: 100px;
   align-items: center center;
   margin-left: 50px;
+  height: auto;
+}
+
+/*media */
+
+@media (min-width: 720px) {
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
